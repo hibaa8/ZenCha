@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3lm6bkbbpqua"]
+
+[ext_resource type="Script" path="res://scripts/Main.gd" id="1_7u7nx"]
+[ext_resource type="Texture2D" uid="uid://dia2npsyn84hd" path="res://Assets/Backgrounds/Cafe/start_screen.jpeg" id="2_yrbah"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_7u7nx")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 1759.0
+offset_bottom = 990.0
+texture = ExtResource("2_yrbah")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PlayBtn" type="Button" parent="."]
+offset_left = 143.0
+offset_top = 626.0
+offset_right = 674.0
+offset_bottom = 738.0
+theme_override_font_sizes/font_size = 40
+text = "Play"
+
+[node name="QuitBtn" type="Button" parent="."]
+offset_left = 140.0
+offset_top = 762.0
+offset_right = 670.0
+offset_bottom = 870.0
+theme_override_font_sizes/font_size = 40
+text = "Quit
+"
+
+[connection signal="pressed" from="PlayBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]

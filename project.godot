@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="forestCafetake2"
-run/main_scene="res://main.tscn"
+run/main_scene="res://scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
 
 [rendering]
 
