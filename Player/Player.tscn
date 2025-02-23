@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvgy8cmrbhg8b"]
+
+[ext_resource type="Texture2D" uid="uid://du0lg8ch7hgw7" path="res://Assets/Environments/Mist Forest/Previews/mist-forest-background-preview.png" id="1_2l8xl"]
+[ext_resource type="Texture2D" uid="uid://py27oxr4gwen" path="res://Assets/Environments/Mist Forest/layers/mist-forest-background-tree.png" id="2_iey2y"]
+[ext_resource type="Texture2D" uid="uid://bus6dtlx0lyvx" path="res://Assets/Characters/Players/Foxy/Sprites/run/player-run-1.png" id="3_y73qi"]
+[ext_resource type="Texture2D" uid="uid://bv40god05xj5c" path="res://Assets/Characters/Players/Foxy/Sprites/run/player-run-2.png" id="4_x8alj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b8mqo"]
+radius = 25.0
+height = 112.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u382g"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CapsuleShape2D_b8mqo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u382g")
+animation = &"Walk"
+
+[node name="Mist-forest-background-preview" type="Sprite2D" parent="."]
+position = Vector2(218, 33.5)
+scale = Vector2(1.36719, 1.52232)
+texture = ExtResource("1_2l8xl")
+
+[node name="Mist-forest-background-tree" type="Sprite2D" parent="."]
+position = Vector2(88, 381)
+texture = ExtResource("2_iey2y")
+
+[node name="Player-run-1" type="Sprite2D" parent="."]
+position = Vector2(-317, 225)
+texture = ExtResource("3_y73qi")
+
+[node name="Player-run-2" type="Sprite2D" parent="."]
+position = Vector2(-260, 228)
+texture = ExtResource("4_x8alj")
