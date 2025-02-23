@@ -1,40 +1,104 @@
-[gd_scene load_steps=6 format=3 uid="uid://br0oyfnhdu1vl"]
+[gd_scene load_steps=12 format=3 uid="uid://br0oyfnhdu1vl"]
 
+[ext_resource type="Texture2D" uid="uid://c88pubc1nikq6" path="res://Assets/Backgrounds/Cafe/kitchen_background.jpeg" id="1_6rk0j"]
 [ext_resource type="PackedScene" uid="uid://cvgy8cmrbhg8b" path="res://Player/Player.tscn" id="1_gx5ie"]
+[ext_resource type="Texture2D" uid="uid://ybum6cyp1olk" path="res://Assets/Backgrounds/Cafe/counter.png" id="2_gkxjf"]
+[ext_resource type="Script" path="res://scripts/customer_manager.gd" id="4_1hsmt"]
+[ext_resource type="Texture2D" uid="uid://b4weuu3dehqms" path="res://Assets/speech_bubble.png" id="5_2xksl"]
+[ext_resource type="Texture2D" uid="uid://b7xkp6ustxdrb" path="res://Assets/recipe_box.png" id="6_xoilf"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_llsk4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pc3cf"]
-size = Vector2(1013, 57.5)
+size = Vector2(1901.5, 235.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_og0vq"]
-size = Vector2(29.5, 481.75)
+size = Vector2(13.75, 1106.88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mg33"]
-size = Vector2(29.5, 481.75)
+size = Vector2(11.375, 1112.44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7tvro"]
+animations = []
 
 [node name="World" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("1_gx5ie")]
-position = Vector2(195, 384)
+[node name="Background" type="TextureRect" parent="."]
+offset_top = 2.0
+offset_right = 1909.0
+offset_bottom = 852.0
+texture = ExtResource("1_6rk0j")
+expand_mode = 1
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Player" parent="." instance=ExtResource("1_gx5ie")]
+visible = false
+position = Vector2(678, 534)
+
+[node name="Customer" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_llsk4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(547, 468)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Customer"]
+position = Vector2(957.25, 983.875)
 shape = SubResource("RectangleShape2D_pc3cf")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(1064, 256)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Customer"]
+position = Vector2(1920.12, 550.562)
 shape = SubResource("RectangleShape2D_og0vq")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(23, 255)
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Customer"]
+position = Vector2(-1.6875, 548.781)
 shape = SubResource("RectangleShape2D_6mg33")
 
-[node name="Panel" type="Panel" parent="."]
-offset_left = 39.0
-offset_top = 437.0
-offset_right = 1049.0
-offset_bottom = 496.0
+[node name="Ground" type="Panel" parent="."]
+offset_left = -5.0
+offset_top = 862.0
+offset_right = 1909.0
+offset_bottom = 1098.0
+
+[node name="Counter" type="TextureRect" parent="."]
+offset_left = 364.0
+offset_top = 161.0
+offset_right = 1914.0
+offset_bottom = 853.0
+texture = ExtResource("2_gkxjf")
+
+[node name="CustomerManager" type="Node2D" parent="."]
+script = ExtResource("4_1hsmt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CustomerManager"]
+sprite_frames = SubResource("SpriteFrames_7tvro")
+animation = &""
+
+[node name="SpeechBubble" type="TextureRect" parent="CustomerManager"]
+offset_left = 691.0
+offset_top = 278.0
+offset_right = 964.0
+offset_bottom = 518.0
+texture = ExtResource("5_2xksl")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CustomerManager/SpeechBubble"]
+visible = false
+layout_mode = 0
+offset_left = 61.0
+offset_top = 76.0
+offset_right = 264.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 25
+text = "Giving order..."
+
+[node name="RecipeBox" type="TextureRect" parent="CustomerManager"]
+offset_left = 1537.0
+offset_top = 138.0
+offset_right = 1907.0
+offset_bottom = 636.0
+texture = ExtResource("6_xoilf")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="CustomerManager/RecipeBox"]
+layout_mode = 0
+offset_left = 1502.0
+offset_top = 252.0
+offset_right = 1829.0
+offset_bottom = 617.0

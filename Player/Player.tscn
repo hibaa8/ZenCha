@@ -13,8 +13,8 @@
 [ext_resource type="Texture2D" uid="uid://bt3bp66xy6ih1" path="res://Assets/Customers/Players/Foxy/Sprites/run/player-run-6.png" id="7_xa6q2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b8mqo"]
-radius = 25.0
-height = 112.0
+radius = 183.0
+height = 562.0
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u382g"]
 animations = [{
@@ -63,11 +63,11 @@ animations = [{
 script = ExtResource("1_77u2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -2)
+position = Vector2(9, 33)
 shape = SubResource("CapsuleShape2D_b8mqo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -8)
-scale = Vector2(2.03788, 2.17188)
+position = Vector2(27, 80.1484)
+scale = Vector2(11.616, 14.3843)
 sprite_frames = SubResource("SpriteFrames_u382g")
 animation = &"Walk"
