@@ -1,0 +1,103 @@
+[gd_scene load_steps=22 format=3 uid="uid://cn5xq5tnu8nqd"]
+
+[ext_resource type="Script" path="res://Scripts/step_2.gd" id="1_j3fka"]
+[ext_resource type="Texture2D" uid="uid://sb6dynausgaj" path="res://Assets/Milk/1.png" id="2_gs412"]
+[ext_resource type="Texture2D" uid="uid://c33k205hlaypo" path="res://Assets/Milk/2.png" id="3_lg5ay"]
+[ext_resource type="Texture2D" uid="uid://bikxhb1fnnbi1" path="res://Assets/Milk/3.png" id="4_vh4j8"]
+[ext_resource type="Texture2D" uid="uid://bf65055ovicht" path="res://Assets/Milk/4.png" id="5_whwar"]
+[ext_resource type="Texture2D" uid="uid://diab28hnlwx08" path="res://Assets/Milk/5.png" id="6_6dlnv"]
+[ext_resource type="Texture2D" uid="uid://b6q34kdor4uda" path="res://Assets/Milk/6.png" id="7_p1xf3"]
+[ext_resource type="Texture2D" uid="uid://dg52ou63u3xj3" path="res://Assets/Milk/7.png" id="8_4kdjl"]
+[ext_resource type="Texture2D" uid="uid://ch5am1jtihqiq" path="res://Assets/Milk/8.png" id="9_2wymy"]
+[ext_resource type="Texture2D" uid="uid://dcjpyx0lp1nrx" path="res://Assets/Milk/9.png" id="10_jaa56"]
+[ext_resource type="Texture2D" uid="uid://co7wrkh14cgch" path="res://Assets/Milk/10.png" id="11_cetf1"]
+[ext_resource type="Texture2D" uid="uid://cjkej67o7y37w" path="res://Assets/Milk/11.png" id="12_fjbl6"]
+[ext_resource type="Texture2D" uid="uid://b0pmhch62slly" path="res://Assets/Milk/12.png" id="13_jqxx3"]
+[ext_resource type="Texture2D" uid="uid://df6gdk7yqmy0c" path="res://Assets/Milk/13.png" id="14_yw3k7"]
+[ext_resource type="Texture2D" uid="uid://b03f2uu2cakv" path="res://Assets/Milk/14.png" id="15_0f3oq"]
+[ext_resource type="Texture2D" uid="uid://bmtenkhem2ury" path="res://Assets/Milk/15.png" id="16_ehr3n"]
+[ext_resource type="Texture2D" uid="uid://bfes1r6556dj6" path="res://Assets/Milk/16.png" id="17_3wnau"]
+[ext_resource type="Texture2D" uid="uid://bkw8js3f5yv5w" path="res://Assets/Milk/17.png" id="18_wlvqt"]
+[ext_resource type="Texture2D" uid="uid://6wnkn34udsfq" path="res://Assets/Milk/18.png" id="19_biuva"]
+[ext_resource type="Texture2D" uid="uid://dfddg1avmb4em" path="res://Assets/Milk/19.png" id="20_gvure"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v1hlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_gs412")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lg5ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vh4j8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_whwar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6dlnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_p1xf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4kdjl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2wymy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jaa56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cetf1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fjbl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jqxx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_yw3k7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_0f3oq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_ehr3n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3wnau")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wlvqt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_biuva")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_gvure")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Step2" type="Node2D"]
+rotation = -0.0048241
+script = ExtResource("1_j3fka")
+
+[node name="AnimatedBackground" type="AnimatedSprite2D" parent="."]
+position = Vector2(962.374, 546.649)
+sprite_frames = SubResource("SpriteFrames_v1hlf")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 941.489
+offset_top = 315.545
+offset_right = 1119.49
+offset_bottom = 405.545
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 40

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="forestCafetake2"
-run/main_scene="res://scenes/Main.tscn"
+run/main_scene="res://Scenes/Main.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://Scripts/game_manager.gd"
 
 [display]
 

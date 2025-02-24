@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ctvnxlbple42t"
+path="res://.godot/imported/Aves - Matcha Latte.mp3-47e1b0a66ed1e90ea9c8a75ac5582173.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sound/Aves - Matcha Latte.mp3"
+dest_files=["res://.godot/imported/Aves - Matcha Latte.mp3-47e1b0a66ed1e90ea9c8a75ac5582173.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
