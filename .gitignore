@@ -2,3 +2,4 @@
 .godot/
 /android/
 Assets/Props\ Items\ and\ VFX
+Scripts/music_manager.gd

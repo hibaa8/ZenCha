@@ -1,6 +1,6 @@
 extends Node
 
-var total_stars = 0  # Keeps track of total stars
+var total_stars = 0  
 
 func add_star():
 	total_stars += 1
