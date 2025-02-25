@@ -1,0 +1,63 @@
+[gd_scene load_steps=14 format=3 uid="uid://ccyaf6x6f42g8"]
+
+[ext_resource type="Texture2D" uid="uid://bdur7f3dvxvsi" path="res://Assets/Shake/1.png" id="1_pva0h"]
+[ext_resource type="Script" path="res://Scripts/shake.gd" id="1_pyk2f"]
+[ext_resource type="Texture2D" uid="uid://juigxgkd5f4p" path="res://Assets/Shake/2.png" id="2_i4qke"]
+[ext_resource type="Texture2D" uid="uid://cgui1wsjau1o7" path="res://Assets/Shake/3.png" id="3_8pev4"]
+[ext_resource type="Texture2D" uid="uid://8yyd5d3jfnc5" path="res://Assets/Shake/4.png" id="4_2axum"]
+[ext_resource type="Texture2D" uid="uid://d3yngxrool17l" path="res://Assets/Shake/5.png" id="5_bjrw0"]
+[ext_resource type="Texture2D" uid="uid://c1twfte2va8jb" path="res://Assets/Shake/6.png" id="6_ewdqw"]
+[ext_resource type="Texture2D" uid="uid://bfqjtqw2nw1mc" path="res://Assets/Shake/7.png" id="7_m0l6o"]
+[ext_resource type="Texture2D" uid="uid://d1keletvfwyc8" path="res://Assets/Shake/8.png" id="8_u8brd"]
+[ext_resource type="Texture2D" uid="uid://qjcwy3g1gji2" path="res://Assets/Shake/9.png" id="9_eoj1a"]
+[ext_resource type="Texture2D" uid="uid://kf6sjrvbtthe" path="res://Assets/Shake/10.png" id="10_nh3e7"]
+[ext_resource type="AudioStream" uid="uid://dgpqjk4tpfmvn" path="res://Assets/Sound/4-piece.mp3" id="12_xsrat"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ai70j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pva0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_i4qke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8pev4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_2axum")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bjrw0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ewdqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_m0l6o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_u8brd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_eoj1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_nh3e7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Shake" type="Node2D"]
+script = ExtResource("1_pyk2f")
+
+[node name="AnimatedBackground" type="AnimatedSprite2D" parent="."]
+position = Vector2(962, 544)
+sprite_frames = SubResource("SpriteFrames_ai70j")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_xsrat")
+autoplay = true

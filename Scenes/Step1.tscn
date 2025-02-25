@@ -1,0 +1,99 @@
+[gd_scene load_steps=21 format=3 uid="uid://becr04pluvgj7"]
+
+[ext_resource type="Script" path="res://Scripts/step_1.gd" id="1_o0fby"]
+[ext_resource type="Texture2D" uid="uid://co8hwfopro4we" path="res://Assets/Matcha/1.png" id="2_ek5o5"]
+[ext_resource type="Texture2D" uid="uid://b6a7wgkuqo5yc" path="res://Assets/Matcha/2.png" id="3_1fiof"]
+[ext_resource type="Texture2D" uid="uid://5txhy61her4d" path="res://Assets/Matcha/3.png" id="4_sm738"]
+[ext_resource type="Texture2D" uid="uid://dq80wcnv212rv" path="res://Assets/Matcha/4.png" id="5_yh0ag"]
+[ext_resource type="Texture2D" uid="uid://ch4scogxiintq" path="res://Assets/Matcha/5.png" id="6_oxfyl"]
+[ext_resource type="Texture2D" uid="uid://cd2ouucanyr5u" path="res://Assets/Matcha/6.png" id="7_q8cdb"]
+[ext_resource type="Texture2D" uid="uid://cole2iba081jb" path="res://Assets/Matcha/7.png" id="8_rlx2o"]
+[ext_resource type="Texture2D" uid="uid://y2frftd2ya6v" path="res://Assets/Matcha/8.png" id="9_0hch6"]
+[ext_resource type="Texture2D" uid="uid://d4lnyfg64js08" path="res://Assets/Matcha/9.png" id="10_6p70e"]
+[ext_resource type="Texture2D" uid="uid://dhckkq0ft48ak" path="res://Assets/Matcha/10.png" id="11_kcohl"]
+[ext_resource type="Texture2D" uid="uid://cmk21njcyirv6" path="res://Assets/Matcha/11.png" id="12_vm8sb"]
+[ext_resource type="Texture2D" uid="uid://13gmyn5gheum" path="res://Assets/Matcha/12.png" id="13_430nw"]
+[ext_resource type="Texture2D" uid="uid://brr0cb5lmfbwv" path="res://Assets/Matcha/13.png" id="14_lp21j"]
+[ext_resource type="Texture2D" uid="uid://dbnjwbq3dkeei" path="res://Assets/Matcha/14.png" id="15_4lv2y"]
+[ext_resource type="Texture2D" uid="uid://drtdgm20vmvt1" path="res://Assets/Matcha/15.png" id="16_gs3bo"]
+[ext_resource type="Texture2D" uid="uid://b2n626ygdbbvs" path="res://Assets/Matcha/16.png" id="17_5ngbp"]
+[ext_resource type="FontFile" uid="uid://cyey6p2xdv47s" path="res://Assets/Design/Shooting Star.ttf" id="18_t7ahh"]
+[ext_resource type="AudioStream" uid="uid://daf6u2lbbvdqf" path="res://Assets/Sound/2-piece.mp3" id="19_2jwkt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ikqec"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ek5o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1fiof")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sm738")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_yh0ag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oxfyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q8cdb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rlx2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0hch6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6p70e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kcohl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vm8sb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_430nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_lp21j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_4lv2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gs3bo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5ngbp")
+}],
+"loop": true,
+"name": &"PourMatcha",
+"speed": 5.0
+}]
+
+[node name="Step1" type="Node2D"]
+script = ExtResource("1_o0fby")
+
+[node name="AnimatedBackground" type="AnimatedSprite2D" parent="."]
+position = Vector2(964, 542)
+sprite_frames = SubResource("SpriteFrames_ikqec")
+animation = &"PourMatcha"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 829.0
+offset_top = 206.0
+offset_right = 1619.0
+offset_bottom = 348.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("18_t7ahh")
+theme_override_font_sizes/font_size = 50
+text = "Click to start adding ingredients!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_2jwkt")
+autoplay = true
