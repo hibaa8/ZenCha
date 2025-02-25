@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3lm6bkbbpqua"]
+[gd_scene load_steps=6 format=3 uid="uid://c3lm6bkbbpqua"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_7u7nx"]
-[ext_resource type="Texture2D" uid="uid://dia2npsyn84hd" path="res://Assets/Backgrounds/Cafe/start_screen.jpeg" id="2_yrbah"]
-[ext_resource type="Texture2D" uid="uid://d1o1l0cy8whbi" path="res://Assets/Design/ZenCha-clear.png" id="3_fh67u"]
+[ext_resource type="Texture2D" uid="uid://c6o7ybwjpem5y" path="res://Assets/Backgrounds/Cafe/start_screen.jpeg" id="2_yrbah"]
+[ext_resource type="AudioStream" uid="uid://b4k1aiyi8es4g" path="res://Assets/Sound/1-piece.mp3" id="3_o86lh"]
+[ext_resource type="Texture2D" uid="uid://dqejehd716aa1" path="res://Assets/Design/play button.png" id="4_s7jat"]
+[ext_resource type="Texture2D" uid="uid://bfpplcpc5rgi6" path="res://Assets/Design/exit button.png" id="5_q6jqm"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_7u7nx")
@@ -16,30 +18,25 @@ texture = ExtResource("2_yrbah")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="PlayBtn" type="Button" parent="."]
-offset_left = 143.0
-offset_top = 626.0
-offset_right = 674.0
-offset_bottom = 738.0
-theme_override_font_sizes/font_size = 40
-text = "Play"
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_o86lh")
+autoplay = true
 
-[node name="QuitBtn" type="Button" parent="."]
-offset_left = 140.0
-offset_top = 762.0
-offset_right = 670.0
-offset_bottom = 870.0
-theme_override_font_sizes/font_size = 40
-text = "Quit
-"
+[node name="playBtn" type="TextureButton" parent="."]
+offset_left = -959.0
+offset_top = -343.0
+offset_right = 1959.0
+offset_bottom = 1603.0
+texture_normal = ExtResource("4_s7jat")
+stretch_mode = 0
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = 651.0
-offset_top = -74.0
-offset_right = 1579.0
-offset_bottom = 529.0
-texture = ExtResource("3_fh67u")
-expand_mode = 1
+[node name="exitBtn" type="TextureButton" parent="."]
+offset_left = 820.0
+offset_top = -169.0
+offset_right = 3280.0
+offset_bottom = 1425.0
+texture_normal = ExtResource("5_q6jqm")
+stretch_mode = 0
 
-[connection signal="pressed" from="PlayBtn" to="." method="_on_play_btn_pressed"]
-[connection signal="pressed" from="QuitBtn" to="." method="_on_quit_btn_pressed"]
+[connection signal="pressed" from="playBtn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="exitBtn" to="." method="_on_exit_btn_pressed"]

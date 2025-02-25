@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var background = $Background  # Reference the TextureRect
-@onready var exit_btn = $ExitBtn  # Restart button
+@onready var exit_btn = $exitBtn  # Restart button
 
 # Dictionary to map stars to background images
 var backgrounds = {
@@ -26,6 +26,9 @@ func _ready():
 func resize_background():
 	background.size = get_viewport_rect().size  # Set background size to match screen size
 
-func _on_exit_btn_pressed():
+#func _on_exit_btn_pressed():
+
+
+func _on_texture_button_pressed() -> void:
 	GameManager.reset_stars()  # Reset the star count
 	get_tree().change_scene_to_file("res://Scenes/Main.tscn")  # Go back to main menu

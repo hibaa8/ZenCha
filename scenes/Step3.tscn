@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dikc68j4bnxc6"]
+[gd_scene load_steps=22 format=3 uid="uid://dikc68j4bnxc6"]
 
 [ext_resource type="Script" path="res://Scripts/step_3.gd" id="1_s3wn1"]
 [ext_resource type="Texture2D" uid="uid://d2bp2xf0dn4ye" path="res://Assets/Sugar/1.png" id="2_hhlpt"]
@@ -18,6 +18,8 @@
 [ext_resource type="Texture2D" uid="uid://ch46hqws6rkct" path="res://Assets/Sugar/15.png" id="16_t0ivd"]
 [ext_resource type="Texture2D" uid="uid://dgf7idjrnouln" path="res://Assets/Sugar/16.png" id="17_332d5"]
 [ext_resource type="Texture2D" uid="uid://dywglq8jgkxo2" path="res://Assets/Sugar/17.png" id="18_2bdgb"]
+[ext_resource type="FontFile" uid="uid://cyey6p2xdv47s" path="res://Assets/Design/Shooting Star.ttf" id="19_6472y"]
+[ext_resource type="AudioStream" uid="uid://dgpqjk4tpfmvn" path="res://Assets/Sound/4-piece.mp3" id="20_1plfl"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_q7c3v"]
 animations = [{
@@ -86,9 +88,14 @@ script = ExtResource("1_s3wn1")
 sprite_frames = SubResource("SpriteFrames_q7c3v")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 34.0
-offset_top = -215.0
-offset_right = 203.0
-offset_bottom = -160.0
+offset_left = -58.0
+offset_top = -292.0
+offset_right = 111.0
+offset_bottom = -180.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("19_6472y")
+theme_override_font_sizes/font_size = 50
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_1plfl")
+autoplay = true

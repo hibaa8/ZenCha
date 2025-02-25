@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<<< HEAD:Assets/Backgrounds/cafe_main_room/line.png.import
 uid="uid://c757t8o5q7ali"
 path="res://.godot/imported/line.png-14a7be76a10faad65fb289d912ea4623.ctex"
+========
+uid="uid://brsftn3m2ofqu"
+path="res://.godot/imported/1.png-bae447b768d288cce7ec9a948709b6a8.ctex"
+>>>>>>>> 6b6e397e33c3cf729db0762b928a243ab3055951:Assets/Backgrounds/flowerbackground/1.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:Assets/Backgrounds/cafe_main_room/line.png.import
 source_file="res://Assets/Backgrounds/cafe_main_room/line.png"
 dest_files=["res://.godot/imported/line.png-14a7be76a10faad65fb289d912ea4623.ctex"]
+========
+source_file="res://Assets/Backgrounds/flowerbackground/1.png"
+dest_files=["res://.godot/imported/1.png-bae447b768d288cce7ec9a948709b6a8.ctex"]
+>>>>>>>> 6b6e397e33c3cf729db0762b928a243ab3055951:Assets/Backgrounds/flowerbackground/1.png.import
 
 [params]
 

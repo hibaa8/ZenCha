@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cn5xq5tnu8nqd"]
+[gd_scene load_steps=24 format=3 uid="uid://cn5xq5tnu8nqd"]
 
 [ext_resource type="Script" path="res://Scripts/step_2.gd" id="1_j3fka"]
 [ext_resource type="Texture2D" uid="uid://sb6dynausgaj" path="res://Assets/Milk/1.png" id="2_gs412"]
@@ -20,6 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://bkw8js3f5yv5w" path="res://Assets/Milk/17.png" id="18_wlvqt"]
 [ext_resource type="Texture2D" uid="uid://6wnkn34udsfq" path="res://Assets/Milk/18.png" id="19_biuva"]
 [ext_resource type="Texture2D" uid="uid://dfddg1avmb4em" path="res://Assets/Milk/19.png" id="20_gvure"]
+[ext_resource type="FontFile" uid="uid://cyey6p2xdv47s" path="res://Assets/Design/Shooting Star.ttf" id="21_5jblj"]
+[ext_resource type="AudioStream" uid="uid://b1rp440407urj" path="res://Assets/Sound/3-piece.mp3" id="22_1m3cu"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_v1hlf"]
 animations = [{
@@ -95,9 +97,14 @@ position = Vector2(962.374, 546.649)
 sprite_frames = SubResource("SpriteFrames_v1hlf")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 941.489
-offset_top = 315.545
-offset_right = 1119.49
-offset_bottom = 405.545
+offset_left = 939.909
+offset_top = 228.536
+offset_right = 1117.91
+offset_bottom = 340.536
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("21_5jblj")
+theme_override_font_sizes/font_size = 50
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("22_1m3cu")
+autoplay = true
